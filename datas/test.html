@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+      <div>
+          <h1>Test Affichage et insertion de livres</h1>
+          <p>Récupérez exe_ecrivain2.sql et importez le dans phpmyadmin<br/></p>
+          <h2>Structure</h2>
+          <h3>4 types de page:</h3>
+          
+          <h4>page d'accueil</h4>
+          <p>La page d'accueil va afficher:</p>
+          <ul><li>Titre: Les auteurs du 16ème au 20ème siècle</li>
+              <li>Menu - périodes (voir menu)</li>
+              <li>Affichage de 3 résumés d'écrivains au hasard (ORDER BY RAND() LIMIT 3) avec :</li>
+              <li><ul><li>lenom</li>
+                  <li>la période (clicable avec une variable get nommée 'idperiode')</li>
+              <li>200 caractères de la description de l'écrivain (sql!), puis lire la suite avec une variable get nommée 'idecrivain' contenant l'id de l'écrivain</li>
+              </ul>
+          </ul>
+      
+          <h4>page de période</h4>
+          <p>La page de période va afficher:</p>
+          <ul><li>Titre: ~periode.laperiode~ siècle</li>
+              <li>Menu - périodes (voir menu)</li>
+              <li>Affichage de tous les résumés d'écrivains de cette période. "pas d'écrivain" affiché si vide</li>
+             <li> <ul><li>lenom</li>
+              <li>250 caractères de la description de l'écrivain (sql!), puis lire la suite avec une variable get nommée 'idecrivain' contenant l'id de l'écrivain</li>
+              </ul>
+          </ul>
+          
+          
+          <h4>page de détail écrivain</h4>
+          <p>La page du détail écrivain va afficher:</p>
+          <ul><li>Titre: ~lenom~</li>
+              <li>Menu - périodes (voir menu)</li>
+              
+             <li> <ul><li>lenom</li>
+                     <li>la période (clicable avec une variable get nommée 'idperiode')</li>
+              <li>Affichage du résumé complet de l'écrivain (avec retour automatique à la ligne)</li>
+              <li>Affichage de tous les livres de l'écrivain clicables (avec une variable get 'idlivre') classés par lasortie ascendant:
+                  <ul>
+                      <li>'letitre'</li>
+                      <li>Parution: 'lasortie'</li>
+                      <li>'ladescription' du livre (100 caractères en sql) puis lire la suite avec une variable get nommée 'idlivre' </li>
+                      
+                  </ul></li>
+              </ul>
+          </ul>
+          
+          
+          
+          <h4>page de détail livre</h4>
+          <p>La page du détail livre va afficher:</p>
+          <ul><li>Titre: ~letitre~</li>
+              <li>Menu - périodes (voir menu)</li>
+              
+             <li> <ul><li>letitre </li>
+                     <li>le nom de l'auteur du livre</li>
+                     <li>la période liée à l'auteur</li>
+              <li>Affichage du résumé complet du livre (avec retour automatique à la ligne)
+              
+                  <ul>
+                      <li>'letitre'</li>
+                      <li>Parution: 'lasortie'</li>
+                      <li>'ladescription' du livre Affichage du résumé complet du livre (avec retour automatique à la ligne) </li>
+                      <li>Affichage des autres livres du même auteur (simple lien clicable sur le titre)
+                  </ul></li>
+             
+              </ul>
+          </ul>
+          
+           <h4>page du menu</h4>
+          <p>Le menu va afficher:</p>
+          <ul><li>Retour à l'accueil</li>
+              <li>affichage de toutes les périodes (depuis db) classée par id ASC, </li>
+              <li>lien vers une page ?admin</li></ul>
+          
+          <h4>page d'admin</h4>
+          <p>On doit pouvoir ajouter des livres à des auteurs déja existants:</p>
+          
+                     
+      </div>
+  </body>
+</html>
