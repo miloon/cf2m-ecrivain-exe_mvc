@@ -6,7 +6,7 @@ Test d'intégration (examen ponctuel pour vérifier les acquis durant la formati
 Récupérez exe_ecrivain2.sql et importez le dans phpmyadmin
 
 ### Structure
-4 types de page :
+
 - page d'accueil
 - page de période
 - page de détail écrivain
@@ -21,7 +21,8 @@ Récupérez exe_ecrivain2.sql et importez le dans phpmyadmin
     Affichage de 3 résumés d'écrivains au hasard (ORDER BY RAND() LIMIT 3) avec :
             - lenom
             - la période (clicable avec une variable get nommée 'idperiode')
-            - 200 caractères de la description de l'écrivain (sql!), puis lire la suite avec une variable get nommée 'idecrivain' contenant l'id de l'écrivain
+            - 200 caractères de la description de l'écrivain (sql!), 
+            puis lire la suite avec une variable get nommée 'idecrivain' contenant l'id de l'écrivain
 
 ### La page de période va afficher :
 
@@ -39,7 +40,8 @@ Récupérez exe_ecrivain2.sql et importez le dans phpmyadmin
         - lenom
         - la période (clicable avec une variable get nommée 'idperiode')
     Affichage du résumé complet de l'écrivain (avec retour automatique à la ligne)
-    Affichage de tous les livres de l'écrivain clicables (avec une variable get 'idlivre') classés par lasortie ascendant:
+    Affichage de tous les livres de l'écrivain clicables (avec une variable get 'idlivre') 
+    classés par lasortie ascendant:
         - 'letitre'
         - Parution: 'lasortie'
         - 'ladescription' du livre (100 caractères en sql) puis lire la suite avec une variable get nommée 'idlivre'
